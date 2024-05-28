@@ -10,7 +10,7 @@ user_counts = Counter(all_users)
 users_to_keep = {user for user, count in user_counts.items() if count >= 2}
 
 def filter_and_append_users(star_users):
-    users = star_users.split('|')
+    users = str(star_users).split('|')
     filtered_users = [user for user in users if user in users_to_keep]
 
     if len(filtered_users) < 1000:
